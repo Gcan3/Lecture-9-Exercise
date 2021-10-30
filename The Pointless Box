@@ -1,0 +1,95 @@
+#include <iostream>
+
+using namespace std;
+
+//The first two are the initial workings (figuring out some ways):
+
+/*int main()
+{
+    int num;
+    cout << "Enter number" << endl;
+    cin >> num;
+
+    if (std::cin.fail())
+    {
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cout << "Incorrect command\n: ";
+    }
+    else if (num = 1) {
+
+        while (num = 1) {
+            cout << "You have entered the number 1" << endl;
+            break;
+        }
+        
+    }
+    else if (num = 2) {
+        while (num = 2) {
+            cout << "You have entered the number 2" << endl;
+            break;
+        }
+    }
+    else {
+        cout << "You have entered a number that is over 2" << endl;
+        cout << "Enter a number" << endl;
+        cin >> num;
+    }
+
+    
+}*/
+
+/*int main() {
+    cout << "Enter number" << endl;
+    int num;
+    cin >> num;
+    if (std::cin.fail())
+    {
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cout << "Incorrect command\n: ";
+    }
+    else {
+        while (num != 0 && num <= 2) {
+            if (num == 1) {
+                cout << "You entered 1" << endl;
+            }
+            else (num == 2) {
+                cout << "You entered 2" << endl;
+            }
+            cout << "Enter a number either 1 or 2\n";
+            cin >> num;
+            return 0;
+        }
+       
+    }
+}*/
+
+//Final and succeful work:
+
+int main()
+{
+    cout << "Enter a number" << endl;
+    int num;
+    cin >> num;
+    while ((num != 0) && (num <= 2))
+    {
+        if (num == 1)
+        {
+            cout << "you have entered the number 1\n";
+            break;
+        }
+        else
+        {
+            cout << "You entered number 2" << endl;
+            break;
+        }
+
+        cout << "Enter a number" << endl;
+        cin >> num;
+       
+    }
+    cout << "You entered a number that's neither 1 or 2";
+
+    //Working but when the input is either 1 or 2, it still displays "You entered a number that's neither 1 or 2".
+}
