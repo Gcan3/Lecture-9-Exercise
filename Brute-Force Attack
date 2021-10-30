@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    int password = 246;
+    int passEnter;
+    cout << "Enter passcode" << endl;
+    cin >> passEnter;
+
+    while (passEnter != password) {
+        cout << "Wrong passcode" << endl;
+        cout << "Enter passcode" << endl;
+        cin >> passEnter;
+    }
+
+    cout << "Safe unlocked" << endl;
+}
