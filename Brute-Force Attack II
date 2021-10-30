@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    int password = 246;
+    int passEnter;
+    int attempts = 5;
+
+    while (attempts > 0) {
+        cout << "Enter passcode" << endl;
+        cin >> passEnter;
+
+        if (passEnter == password) {
+            cout << "Safe unloncked" << endl;
+            break;
+        }
+        else {
+            cout << "Wrong passcode" << endl;
+            cout << "You have " << attempts << " attemp(s) left" << endl;
+            attempts--;
+        }
+    }
+
+    if (attempts == 0) {
+        cout << "You have lost all your attempts. Proceeding to initiate govermental lockdown" << endl;
+    }
+
+    //Works but the last if conditional was triggered after second last attempt
+}
